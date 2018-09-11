@@ -11,6 +11,17 @@
 @include('shared.navbar')
 
 @yield('content')
+<!-- Footer -->
+<footer class="page-footer font-small blue">
 
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3 navbar-fixed-bottom" >© 2018 Copyright:
+    <a href="https://www.towel-emporium.com"> Towel Emporium, Inc.  All rights reserved.</a></br/>
+	<small>Version 1</small>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 </body>
 </html>
