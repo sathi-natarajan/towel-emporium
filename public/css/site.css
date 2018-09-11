@@ -49,11 +49,3 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-			
-			footer {
-			  height: 50px;
-			  margin-top: -50px;
-			  fixed-bottom;
-			}
-			
-			.navbar-nav > li > .dropdown-menu { background-color: red; }
