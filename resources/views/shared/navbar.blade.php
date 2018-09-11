@@ -17,7 +17,7 @@
       </li>
       <li>
 			<div class="dropdown">
-				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<button class="btn btn-secondary dropdown-toggle nav-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:lightgray;border:none;">
 					Customers/Guests
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
