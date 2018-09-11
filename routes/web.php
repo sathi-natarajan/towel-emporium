@@ -23,3 +23,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/logout', function () {
+	Auth::logout();
+	return Redirect::route('home');
+    //return "You are logging out";
+});
+Route::get('/about', 'HomeController@about');
+Route::get('/contact', 'HomeController@contact');
