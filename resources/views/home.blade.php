@@ -23,7 +23,7 @@
 									{{$towel->toweldescription}}
 								</span><br/>
 								<p>
-									<img src="{{ asset('images/barber-towels/basicblack.jpg') }}" alt="image of {{$towel->towelname}}" width="100" height="200"/>
+									<img class="imgProductThumbs" src="{{ asset('images/barber-towels/basicblack.jpg') }}" alt="image of {{$towel->towelname}}" width="100" height="100"/>
 								</p>
 								<hr style="background-color:blue;"/>
 						@endforeach
