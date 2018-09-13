@@ -47,10 +47,10 @@ $(document).ready(function(){
 </p>
 
 <!-- Footer -->
-<footer class="page-footer font-small blue">
+<footer class="page-footer font-small blue navbar-fixed-bottom">
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3 fixed-bottom" >© 2018 Copyright:
+  <div class="footer-copyright text-center py-3" >© 2018 Copyright:
     Towel Emporium, Inc.  All rights reserved.</br/>
 	<small>(Web application version 1)</small>
   </div>
