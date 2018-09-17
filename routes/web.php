@@ -32,7 +32,7 @@ Route::get('/logout', function () {
 	<a href='/'>Towel Emporium HOME</a>"; */
 	//return Redirect::route('home');
     //return "You are logging out";
-	Redirect::to('/');
+	return Redirect::to('/');
 });
 Route::get('/about', 'HomeController@about');
 Route::get('/contactus', 'ContactusController@index'); 
