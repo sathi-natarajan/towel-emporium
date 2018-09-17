@@ -79,20 +79,23 @@ $(document).ready(function(){
 </span>
 <div class="well bg-light" style="padding:10px 10px 10px 10px">
 	<form class="form-inline my-2 my-lg-0">
-		  <div>
-				{{ isset(Auth::user()->name) ? Auth::user()->name : "" }}
-				<div class="dropdown" style="margin-left:85%;">
+		  <table width="100%">
+			<tr>
+				<td>{{{ isset(Auth::user()->name) ? Auth::user()->name : "" }}}</td>
+				<td>
+					<div class="dropdown" style="margin-left:85%;">
 					Catagory:
-				<button class="btn btn-default btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border:none;">
-					Barber towels
-				</button>
-				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					<a class="nav-link towel-catagory" href="{{ route('login') }}">Barber towels</a>
-					<a class="nav-link towel-catagory" href="{{ route('login') }}">Car wash towels</a>
+					<button class="btn btn-default btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border:none;">
+						Barber towels
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="nav-link towel-catagory" href="{{ route('login') }}">Barber towels</a>
+						<a class="nav-link towel-catagory" href="{{ route('login') }}">Car wash towels</a>
+					</div>
 				</div>
-				</div>
-				
-			</div>
+				</td>
+			</tr>
+		  </table>
 	</form>
 </div>
 <br/><br/><br/>
