@@ -83,7 +83,7 @@ $(document).ready(function(){
 			<tr>
 				<td>{{{ isset(Auth::user()->name) ? Auth::user()->name : "" }}}</td>
 				<td>
-					<div class="dropdown" style="margin-left:85%;">
+					<div class="dropdown" style="margin-left:75%;">
 					Catagory:
 					<button class="btn btn-default btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border:none;">
 						Barber towels
