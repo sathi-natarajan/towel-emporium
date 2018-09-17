@@ -50,3 +50,18 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+			p .towel-desc {
+			  text-align: right;
+			  margin: 0;
+			  height:110px;
+			}
+
+		.towel-image {
+		  float: left;
+		  width: 250px;
+		  /* shape-outside: url(https://upload.wikimedia.org/wikipedia/commons/3/34/Red_star.svg);
+		  shape-margin:20px */;
+		  margin-right: 20px;
+		  margin-bottom: 20px;
+		}

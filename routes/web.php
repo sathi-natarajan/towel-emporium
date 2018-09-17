@@ -28,10 +28,12 @@ Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', function () {
 	Auth::logout();
-	return "You have successfully logged out.  Click here to go back to main page:<br/>
-	<a href='/'>Towel Emporium HOME</a>";
+	/* return "You have successfully logged out.  Click here to go back to main page:<br/>
+	<a href='/'>Towel Emporium HOME</a>"; */
 	//return Redirect::route('home');
     //return "You are logging out";
+	Redirect::to('home');
 });
 Route::get('/about', 'HomeController@about');
-Route::get('/contact', 'HomeController@contact');
+Route::get('/contactus', 'ContactusController@index'); 
+Route::post('contactus', 'ContactusController@process');
