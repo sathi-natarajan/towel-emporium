@@ -81,7 +81,7 @@ $(document).ready(function(){
 	<form class="form-inline my-2 my-lg-0">
 		  <table width="100%">
 			<tr>
-				<td>{{{ isset(Auth::user()->name) ? Auth::user()->name : "" }}}</td>
+				<td><strong>{{{ isset(Auth::user()->name) ? Auth::user()->name : "" }}}</strong></td>
 				<td>
 					<div class="dropdown" style="margin-left:75%;">
 					Catagory:
