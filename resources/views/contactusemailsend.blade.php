@@ -30,7 +30,7 @@
 							$message = new Swift_Message();
 						 
 							// Set a "subject"
-							$message->setSubject('Demo message using the SwiftMailer library.');
+							$message->setSubject('Message from a Customer/Guest via "Contact Us" form');
 						 
 							// Set the "From address"
 							$message->setFrom([$gmailcredu => 'Towel Emporium']);
