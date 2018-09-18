@@ -36,7 +36,8 @@
 							$message->setFrom([$gmailcredu => 'Towel Emporium']);
  
 							// Set the "To address" [Use setTo method for multiple recipients, argument should be array]
-							$message->addTo($email,'{{$fullname}}');
+							//$message->addTo($email,'{{$fullname}}');
+							$message->addTo($gmailcredu,'{{$fullname}}');
 						 
 							// Add "CC" address [Use setCc method for multiple recipients, argument should be array]
 							//$message->addCc('recipient@gmail.com', 'recipient name');
