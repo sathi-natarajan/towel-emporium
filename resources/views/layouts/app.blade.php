@@ -77,15 +77,15 @@ $(document).ready(function(){
 		<li><a href="#">JavaScript</a></li>
 	</ul>
 </span>
-<div class="well bg-light" style="padding:10px 10px 10px 10px">
-	<form class="form-inline my-2 my-lg-0">
-		  <table width="100%">
+<div class="well" style="padding:10px 10px 10px 10px;background-color:#f0ecec;">
+	<form class="form-inline">
+		  <table width="100%" cellpadding="0" cellspacing="0">
 			<tr>
 				<td><strong>{{{ isset(Auth::user()->name) ? Auth::user()->name : "" }}}</strong></td>
 				<td>
 					<div class="dropdown" style="margin-left:75%;">
 					Catagory:
-					<button class="btn btn-default btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border:none;">
+					<button class="btn btn-default btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border:none;color:black;background-color:#f0ecec;">
 						Barber towels
 					</button>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

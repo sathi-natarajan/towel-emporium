@@ -11,64 +11,36 @@
 				</div>
 
                 <div class="card-body">
-					<!--if you don't put this create blade file, then use "games" only below and not "/games"-->
-    <form method="post" action="/contactus" enctype="multipart/form-data">
-        {{ csrf_field() }}
-       
-		
-		<div class="form-group row">
-				<label for="fullname" class="col-sm-4 col-form-label text-md-right">{{ __('Your fullname:') }}</label>
+					{!! Form::open(['route'=>'contactus']) !!}
+						<div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
+							{!! Form::label('Name:') !!}
+							{!! Form::text('fullname', old('name'), ['class'=>'form-control', 'placeholder'=>'Enter Name']) !!}
+							<span class="text-danger">{{ $errors->first('fullname') }}</span>
+						</div>
+ 
+						<div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
+							{!! Form::label('Email:') !!}
+							{!! Form::text('email', old('email'), ['class'=>'form-control', 'placeholder'=>'Enter Email']) !!}
+							<span class="text-danger">{{ $errors->first('email') }}</span>
+						</div>
+ 
+						<div class="form-group {{ $errors->has('message') ? 'has-error' : '' }}">
+							{!! Form::label('Comments/Suggestions:') !!}
+							{!! Form::textarea('commentssuggestions', old('message'), ['class'=>'form-control', 'placeholder'=>'Enter your comments and/or suggestions here']) !!}
+							<span class="text-danger">{{ $errors->first('commentssuggestions') }}</span>
+						</div>
 
-				<div class="col-md-6">
-					<input id="fullname" type="text" class="form-control{{ $errors->has('fullname') ? ' is-invalid' : '' }}" name="fullname" value="{{ old('fullname') }}" required autofocus>
-
-					@if ($errors->has('fullname'))
-						<span class="invalid-feedback" role="alert">
-							<strong>{{ $errors->first('fullname') }}</strong>
-						</span>
-					@endif
-				</div>
-		</div>
-		
-         <div class="form-group row">
-				<label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-				<div class="col-md-6">
-					<input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-
-					@if ($errors->has('email'))
-						<span class="invalid-feedback" role="alert">
-							<strong>{{ $errors->first('email') }}</strong>
-						</span>
-					@endif
-				</div>
-		</div>
-		
-       <div class="form-group row">
-			<label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Your comments and/or suggestions') }}</label><br/>
-			<div class="col-md-6">
-				<textarea id="commentssuggestions" class="form-control{{ $errors->has('commentssuggestions') ? ' is-invalid' : '' }}" name="commentssuggestions" value="{{ old('commentssuggestions') }}" required autofocus></textarea>
-
-				@if ($errors->has('commentssuggestions'))
-					<span class="invalid-feedback" role="alert">
-						<strong>{{ $errors->first('commentssuggestions') }}</strong>
-					</span>
-				@endif
-			</div>
-		</div>
-		
-		<div class="form-group row">
-			<div class="col-sm-9">
-            <input type="checkbox" name="newsletter" value="newsletter" class="col-sm-3 col-form-label">Please check this box to subscribe to our newsletter<br>
-            </div>
-        </div>
-		
-        <div class="form-group row">
-            <div class="offset-sm-3 col-sm-9">
-                <button type="submit" class="btn btn-primary">Send</button>
-            </div>
-        </div>
-    </form>
+						<div class="form-group {{ $errors->has('message') ? 'has-error' : '' }}">
+							{!! Form::label('Need newsletter?') !!}
+							{!! Form::checkbox('newsletter',1) !!}
+							<span class="text-danger">{{ $errors->first('commentssuggestions') }}</span>
+						</div>
+ 
+						<div class="form-group">
+							<button class="btn btn-success">Contact US!</button>
+						</div>
+ 
+					{!! Form::close() !!}
                 </div>
             </div>
         </div>

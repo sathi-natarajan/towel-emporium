@@ -17,15 +17,15 @@
       </li>
       <li>
 			<div class="dropdown">
-				<button class="btn btn-default btn-secondary dropdown-toggle nav-link bg-light" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border:none;">
+				<button class="btn btn-default dropdown-toggle nav-link" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border:none;background-color:#e9e3e2;">
 					Customers/Guests
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 					@if (Auth::guest())
-						<a class="nav-link" href="{{ route('login') }}">Login</a>
-						<a class="nav-link" href="{{ route('register') }}">Register</a>
+						<a class="nav-link towel-emp-login-links" href="{{ route('login') }}">Login</a>
+						<a class="nav-link towel-emp-login-links" href="{{ route('register') }}">Register</a>
 					@else
-						<a class="nav-link" href="{{ route('logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
+						<a class="nav-link towel-emp-login-links" href="{{ route('logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
 					@endif
 				</div>
 			</div>

@@ -56,12 +56,21 @@
 			  margin: 0;
 			  height:110px;
 			}
-
-		.towel-image {
-		  float: left;
-		  width: 250px;
-		  /* shape-outside: url(https://upload.wikimedia.org/wikipedia/commons/3/34/Red_star.svg);
-		  shape-margin:20px */;
-		  margin-right: 20px;
-		  margin-bottom: 20px;
-		}
+			
+			.towel-catagory
+			{
+				text-decoration:none;
+				color:#000000;
+			}
+			
+			.towel-catagory:hover
+			{
+				text-decoration:none;
+				color:#000000;
+				background-color:#f0ecec;
+			}
+			
+			.towel-emp-login-links:hover
+			{
+				background-color:#e9e3e2;
+			}

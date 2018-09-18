@@ -35,5 +35,5 @@ Route::get('/logout', function () {
 	return Redirect::to('/');
 });
 Route::get('/about', 'HomeController@about');
-Route::get('/contactus', 'ContactusController@index'); 
+Route::get('/contactus', 'ContactusController@index')->name('contactus'); 
 Route::post('contactus', 'ContactusController@process');

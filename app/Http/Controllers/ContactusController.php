@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
 //use App\Game;
- use App\Mail\SendMailable;
-
+ //use App\Mail\SendMailable;
 class ContactusController extends Controller
 {
    public function index()
@@ -30,13 +29,29 @@ class ContactusController extends Controller
         //$game->image = request()->file('image')->store('public/images');
 		return view('games.gamesformresults',compact("title","publisher","releasedate","vehicle","gender")); */
 		
-		//Send email
-		$fullname = request('fullname');
+		//Send email - WORKS
+		/* $fullname = request('fullname');
         $email = request('email');
 		$cands=request("commentssuggestions");
 		$newsletter = request('newsletter');
 		\Mail::to('towel.emporium.dev@gmail.com')->send(new SendMailable($fullname,$email,$cands,$newsletter));
-		return view('Thankyou');
+		return view('Thankyou'); */	
 		
-    }
+		$gmailcredu="towel.emporium.dev@gmail.com";
+		$gmailcredp="towelempo";
+		$fullname=request('fullname');
+		$email = request('email');
+		$cands=request("commentssuggestions");
+		$newsletter = request('newsletter');
+		if($newsletter==1)
+			$newsletter="Yes";
+		else
+			$newsletter="No";
+		
+		//This way will work for the purpose but the page will look messed up.  Instead, see
+		//"@include" in contactusemailsend blade view
+		// return view('contactusemailsend',compact("fullname","email","cands","newsletter","gmailcredu","gmailcredp"))
+		// .view("Thankyou");
+		return view('contactusemailsend',compact("fullname","email","cands","newsletter","gmailcredu","gmailcredp"));
+	}
 }
