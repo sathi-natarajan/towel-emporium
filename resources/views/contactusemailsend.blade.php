@@ -65,7 +65,7 @@
 							// Set a "Body"
 							/* $message->addPart('This is the HTML version of the message.<br>Example of inline image:<br><img src="'.$cid.'" width="200" height="200"><br>Thanks,<br>Admin', 'text/html'); */
 							
-							$message->addPart("<p>CONTENTS OF YOUR EMAIL:</br/>
+							$message->addPart("<p>CONTENTS OF YOUR EMAIL:<br/>
 								Full name: $fullname<br/>
 								Email:  $email<br/>
 								Comments and Suggestions:<br/>
