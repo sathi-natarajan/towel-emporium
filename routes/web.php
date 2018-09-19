@@ -33,7 +33,7 @@ Route::get('/contactus', 'ContactusController@index')->name('contactus');
 Route::post('contactus', 'ContactusController@process');
 
 //If this was listed before above routes to be accessible.  Those routes don't seem to work.
-Route::get('/{cat}', 'HomeController@index',['except' => ['/about', '/contactus','/login','/register']]);
+Route::get('/{cat}', 'HomeController@index',['except' => ['/about', '/contactus','/login','/register','contactus']]);
 
 //Route::get('/flights', 'FlightsController@add');
 
