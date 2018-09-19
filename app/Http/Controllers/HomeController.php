@@ -9,6 +9,7 @@ use App\Towel;
 
 class HomeController extends Controller
 {
+	private $cattitle="";
     /**
      * Create a new controller instance.
      *
@@ -24,8 +25,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(string $cat="")
     {
+		
 		/*$categories = "something";
 		return view('home',compact('categories'));
 		
@@ -41,9 +43,39 @@ class HomeController extends Controller
 		
 		//Getting information from "Towels" table for given catagory
 		//$towels=Towel::all()->where('catagoryid', '=', 1);
-		$towels=Towel::paginate(5);
+		if(isset($cat) && !empty($cat))
+		{
+			//return "You supplied a catagory";
+			//This gets only specified columns
+			$catagory=catagory::where('shortname','=',$cat)->get(['catid','categorytitle']);
+			if($catagory)
+			{
+				$catid=$catagory[0]->catid;
+				$cattitle=$catagory[0]->categorytitle;
+				//dd($cattitle,$catid);
+			}
+				
+			else
+			{
+				$catid=1;
+				$cattitle='Barber towels';
+				//dd($cattitle,$catid);
+			}
+		}
+		else
+		{
+				//return "Current catagory will be displayed";
+				$catid=1;
+				$cattitle='Barber towels';
+				//dd($cattitle,$catid);
+		}
+			
+			
+		$towels=Towel::where('catagoryid','=',$catid)->paginate(5);
 		$count=count($towels);
-		return view('home',['catname'=>'Name of category','towels' => $towels,'numtowels' => $count]);
+		
+		
+		return view('home',['catname'=>$cattitle,'towels' => $towels,'numtowels' => $count]);
 		//$request->session()->flash('status', 'Task was successful!'); //undefinted var request				
 		//this way works too
 		//return view('home4',compact("catagories")); //to try

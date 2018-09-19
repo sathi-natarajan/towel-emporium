@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#e9e3e2;">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#cd6090;">
   <a class="navbar-brand" href="#">Towel Emporium, Inc.&trade;</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -17,7 +17,7 @@
       </li>
       <li>
 			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle nav-link" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border:none;background-color:#e9e3e2;">
+				<button class="btn btn-default dropdown-toggle nav-link" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border:none;background-color:#cd6090;">
 					Customers
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -32,8 +32,8 @@
 		</li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button id="btnSearch" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="border: 2px solid #00cd00;background-color:#ffffff;">
+      <button id="btnSearch" class="btn btn-success my-2 my-sm-0" type="submit" style="border: 2px solid #00cd00;background-color:#00cd00;color:#000000;">Search</button>
     </form>
   </div>
 </nav>

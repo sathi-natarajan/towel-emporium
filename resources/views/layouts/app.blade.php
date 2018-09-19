@@ -23,7 +23,7 @@
 <script>
 $(document).ready(function(){
 	//Search button
-    $("#btnSearch,.towel-catagory").click(function(e){
+    $("#btnSearch").click(function(e){
 		e.preventDefault();
 		swal({
 		  title: '<strong>This feature is not yet implemented.  Please retry later.</strong>',
@@ -70,27 +70,20 @@ $(document).ready(function(){
 </head>
 <body>
 @include('shared.navbar')
-<span style="float:right;">
-	<ul class="dropdown-menu">
-		<li><a href="#">HTML</a></li>
-		<li><a href="#">CSS</a></li>
-		<li><a href="#">JavaScript</a></li>
-	</ul>
-</span>
-<div class="well" style="padding:5px 5px 0px 5px;background-color:#f0ecec;">
+<div class="well" style="padding:2px 5px 0px 5px;background-color:#f0ecec;">
 	<form class="form-inline">
 		  <table width="100%" cellpadding="0" cellspacing="0">
 			<tr>
 				<td>&nbsp;&nbsp;&nbsp;<strong>{{{ isset(Auth::user()->name) ? Auth::user()->name : "" }}}</strong></td>
 				<td>
-					<div class="dropdown" style="margin-left:75%;">
+					<div class="dropdown" style="margin-left:75%;font-weight:bold;">
 					Catagory:
-					<button class="btn btn-default btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border:none;color:black;background-color:#f0ecec;">
+					<button class="btn btn-default btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border:none;color:black;background-color:#cd6090;">
 						Barber towels
 					</button>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						<a class="nav-link towel-catagory" href="{{ route('login') }}">Barber towels</a>
-						<a class="nav-link towel-catagory" href="{{ route('login') }}">Car wash towels</a>
+						<a class="nav-link towel-catagory" href="{{ url('/barber-towels') }}">Barber towels</a>
+						<a class="nav-link towel-catagory" href="{{ url('/carwash-towels') }}">Car wash towels</a>
 					</div>
 				</div>
 				</td>
@@ -98,7 +91,7 @@ $(document).ready(function(){
 		  </table>
 	</form>
 </div>
-<br/><br/><br/>
+<br/>
 <p>
 	@yield('content')
 </p>
