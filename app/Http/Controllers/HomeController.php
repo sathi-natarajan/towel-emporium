@@ -47,27 +47,32 @@ class HomeController extends Controller
 		{
 			//return "You supplied a catagory";
 			//This gets only specified columns
+			
 			$catagory=catagory::where('shortname','=',$cat)->get(['catid','categorytitle']);
-			if($catagory)
+			if(count($catagory)>=1)
 			{
 				$catid=$catagory[0]->catid;
 				$cattitle=$catagory[0]->categorytitle;
-				//dd($cattitle,$catid);
-			}
 				
+				//dd($cattitle,$catid);
+			}	
 			else
 			{
-				$catid=1;
-				$cattitle='Barber towels';
+				//The catagory put in URL is invalid.  Display error
+				/* $catid=1;
+				$cattitle='Barber towels'; */
 				//dd($cattitle,$catid);
+				return view("shared.errorpage")->with(['error'=>'Invalid towel catagory',
+				'detailed_message'=>'"' . $cat . '" that you typed in the URL is unavailable OR is an invalid one.']);
 			}
 		}
 		else
 		{
-				//return "Current catagory will be displayed";
-				$catid=1;
-				$cattitle='Barber towels';
-				//dd($cattitle,$catid);
+			//Didn't put catagory name in the URL.  Display "Barber towels" catagory.
+			$catid=1;
+			$cattitle='Barber towels';
+			//dd($cattitle,$catid);
+			
 		}
 			
 			
