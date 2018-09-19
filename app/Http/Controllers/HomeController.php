@@ -40,7 +40,8 @@ class HomeController extends Controller
 		return view('home',['catagory' => $catagories,'numcatagories' => $count]); */
 		
 		//Getting information from "Towels" table for given catagory
-		$towels=Towel::all()->where('catagoryid', '=', 1);
+		//$towels=Towel::all()->where('catagoryid', '=', 1);
+		$towels=Towel::paginate(5);
 		$count=count($towels);
 		return view('home',['catname'=>'Name of category','towels' => $towels,'numtowels' => $count]);
 		//$request->session()->flash('status', 'Task was successful!'); //undefinted var request				

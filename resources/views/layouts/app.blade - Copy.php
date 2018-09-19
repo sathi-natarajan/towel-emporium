@@ -77,11 +77,11 @@ $(document).ready(function(){
 		<li><a href="#">JavaScript</a></li>
 	</ul>
 </span>
-<div class="well" style="padding:5px 5px 0px 5px;background-color:#f0ecec;">
+<div class="well" style="padding:10px 10px 10px 10px;background-color:#f0ecec;">
 	<form class="form-inline">
 		  <table width="100%" cellpadding="0" cellspacing="0">
 			<tr>
-				<td>&nbsp;&nbsp;&nbsp;<strong>{{{ isset(Auth::user()->name) ? Auth::user()->name : "" }}}</strong></td>
+				<td><strong>{{{ isset(Auth::user()->name) ? Auth::user()->name : "" }}}</strong></td>
 				<td>
 					<div class="dropdown" style="margin-left:75%;">
 					Catagory:

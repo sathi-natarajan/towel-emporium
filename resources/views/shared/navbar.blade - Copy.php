@@ -18,7 +18,7 @@
       <li>
 			<div class="dropdown">
 				<button class="btn btn-default dropdown-toggle nav-link" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border:none;background-color:#e9e3e2;">
-					Customers
+					Customers/Guests
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 					@if (Auth::guest())

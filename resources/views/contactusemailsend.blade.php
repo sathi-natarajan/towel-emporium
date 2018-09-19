@@ -11,7 +11,9 @@
 
                 <div class="card-body">
 					<?php
-						//require_once app_path() . '/vendor/autoload.php';
+						if(isset($fullname) && isset($email) && isset($cands))
+						{
+							//require_once app_path() . '/vendor/autoload.php';
 						//require_once __DIR__.'/vendor/autoload.php';
 						try {
 							// Create the SMTP Transport
@@ -82,8 +84,9 @@
 								If you had checked "Need newsletter" checkbox on the form, we will be sure to subscribe you to our newsletter system and send you a note to your email address.</p>
 							<?php
 						} catch (Exception $e) {
-						  echo $e->getMessage();
+							echo $e->getMessage();
 						}
+					}
 					?>
                 </div>
             </div>

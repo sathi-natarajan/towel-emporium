@@ -127,6 +127,17 @@ return [
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
+		],
+		'fullname' => [
+			'required' => 'Your full name must be provided',
+		],
+		'email' => [
+			'required' => 'Email address must be provided',
+			'email'=>'The format of the email address is not valid',
+		],
+		'commentssuggestions' => [
+			'required' => 'Comments/Suggestions field must not be left blank',
+        
         ],
     ],
 

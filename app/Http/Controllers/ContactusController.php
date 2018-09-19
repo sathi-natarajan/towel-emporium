@@ -37,6 +37,13 @@ class ContactusController extends Controller
 		\Mail::to('towel.emporium.dev@gmail.com')->send(new SendMailable($fullname,$email,$cands,$newsletter));
 		return view('Thankyou'); */	
 		
+		//Possibilities - 'fullname' => 'required|unique:games
+		$this->validate(request(), [
+            'fullname' => 'required',
+            'email' => 'required|email',
+            'commentssuggestions' => 'required',
+        ]);
+		
 		$gmailcredu="towel.emporium.dev@gmail.com";
 		$gmailcredp="towelempo";
 		$fullname=request('fullname');
@@ -54,4 +61,5 @@ class ContactusController extends Controller
 		// .view("Thankyou");
 		return view('contactusemailsend',compact("fullname","email","cands","newsletter","gmailcredu","gmailcredp"));
 	}
+	
 }
